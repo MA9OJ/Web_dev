@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Renge</title>
+        <link rel="stylesheet" href="login.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body >
+      <div class="header"background color="#ffc404">
+            <div class="navbar">
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html"> Home </a></li>
+                        <li> <a href="features.html">Features </li></a>
+                        <li> <a href="styleguide.html">Style Guide </a></li>
+                        <li><a href="contact_us.html">Contact Us </a> </li>                       
+                    </ul>
+                </div>
+                
+                <img src="https://renge-color.fueko.net/content/images/2020/07/renge.svg" height="60" width="200">
+               <div class="Register-btn"  < a  href="login.html">Register for free </a> </div>
+                <div class="Signin-btn"><a  href="login.html"> log in </a></div>    
+                <div class="searchbox">
+                    <input type="text" class="searchText" placeholder="Search..">
+                    <a href="#" class="searchbtn">
+                        <i class="fa fa-search"> </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+<!---------------------account-page------------------------->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="http://localhost/blog/img/q1.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form action="login.php" method="POST" id="LoginForm">
+                            <input type="email" placeholder="email" name="email" required>
+                            <input type="password" placeholder="password" name="pass" required>
+                            <button type="submit" class="btn" >Login</button>
+                            <a href="">Forgot password</a>
+                        </form>
+                        <form action="connect.php" method="POST" id="RegForm">
+                            <input type="text" placeholder="username" name="uname" required>
+                            <input type="email" placeholder="email" name="email" required>
+                            <input type="password" placeholder="password" name="pass" required>
+                            <button type="submit" class="btn" >Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<!------------------------------Footer-------------------------->
+
+     <section class="footer-section">
+            <div class="l-footer">
+                 <img src="https://renge-color.fueko.net/content/images/2020/07/renge.svg" height="60" width="200">
+                <br>
+                <p> A minimal, functional theme for running a paid-membership publication on Ghost. </p>
+                <br>
+
+                
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-bitbucket"></i></a>
+                <a href="#"><i class="fa fa-github-square"></i></a>
+                <a href="#"><i class="fa fa-kickstarter-k"></i></a>
+                <a href="#"><i class="fa fa-reddit"></i></a>
+                <a href="#"><i class="fa fa-unsplash"></i></a>
+                <a href="#"><i class="fa fa-vimeo-v"></i></a>
+                <br><br>
+                <br><br>
+                
+            </div>
+
+            <div class="r-footer">
+                <ul class="box">
+                    <li> <a href="#"> Features </a> </li>
+                    <li> <a href="#"> StyleGuide </a> </li>
+                    <li> <a href="#"> Contact </a> </li>
+                    <li> <a href="#"> Get Theme </a> </li>
+                    <li> <a href="#"> Membership </a> </li>
+                </ul>
+                <ul class="box">
+                    <li> <a href="#"> Tags </a> </li>
+                    <li> <a href="#"> Authors </a> </li>
+                    <li> <a href="#"> Subscribe </a> </li>
+                    <li> <a href="#"> 404 </a> </li>
+                    <li> <a href="#"> Account page </a> </li>
+                </ul>
+                <ul class="box">
+                    <li> <a href="#"> Tag page </a> </li>
+                    <li> <a href="#"> Author page </a> </li>
+                    <li> <a href="#"> Light Version </a> </li>
+                    <li> <a href="#"> Dark version </a> </li>
+                    <li> <a href="#"> Sign In/Up </a> </li>
+                </ul>    
+            </div>
+        </section>  
+
+        <p class="p1"> Renge © 2021. All Right Reserved. Published with Ghost. </p>
+
+<!----------------------------JS for Toggle Menu------------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if (MenuItems.style.maxHeight == "0px"){
+
+                MenuItems.style.maxHeight = "200px";
+
+            }
+            else{
+
+                MenuItems.style.maxHeight = "0px";
+
+            }
+        }
+    </script>
+
+<!----------------------------JS for Toggle Form------------------->
+
+    <script>
+        var LoginForm = document.getElementById('LoginForm');
+        var RegForm = document.getElementById('RegForm');
+        var Indicator = document.getElementById("Indicator");
+
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";       
+            Indicator.style.transform = "translateX(100px)";       
+         }
+         function login(){
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)"; 
+            Indicator.style.transform = "translateX(0px)";      
+         }
+    </script>
+
+</body>
+</html>
